@@ -4,7 +4,7 @@ from send_mail import send_mail
 
 app = Flask(__name__)
 
-ENV = 'prod'
+ENV = 'dev'
 
 if ENV == 'dev':
     app.debug = True
@@ -21,7 +21,7 @@ class ContactMe(db.Model):
     __tablename__ = 'contact'
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.String(100), unique = False)
-    phone = db.Column(db.Integer, unique = True)
+    phone = db.Column(db.BigInteger, unique = True)
     email = db.Column(db.String(200), unique = True)
     comments = db.Column(db.Text())
 
