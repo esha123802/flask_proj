@@ -66,7 +66,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 
     <!-- For main heading -->
@@ -95,9 +101,9 @@
         }
 
         .form-group h3 {
-            font-weight:600;
+            font-weight: 600;
             margin-top: 3%;
-            font-size: 20px;
+            font-size: 17px;
         }
 
         input[type='text'],
@@ -126,12 +132,17 @@
         }
 
         .navbar {
-            margin-bottom: 0;
             height: 7%;
             font-family: 'Raleway', sans-serif;
-            position: static;
+            position: fixed;
+            border-radius: 0;
             top: 0;
             z-index: +1;
+            width: 100%;
+        }
+
+        .navbar-collapse {
+            background-color: #343a40;
         }
 
         .bg {
@@ -149,6 +160,23 @@
             border: 2px solid white;
             border-radius: 50%;
             margin-top: 6%;
+        }
+
+        #skills {
+            display: block;
+        }
+
+        #icon {
+            width: 96px;
+            margin: 1% 3% 3% 3%;
+            float: left;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        #icon p {
+            font-family: 'PT Mono', monospace;
+            font-weight: 600;
         }
 
         #name1 {
@@ -189,7 +217,7 @@
         }
 
         .container-fluid {
-            padding: 5% 12%;
+            padding: 1% 12%;
             width: 100%;
             height: 100% auto;
         }
@@ -205,13 +233,17 @@
 
         .alt1 h1 {
             font-family: 'Satisfy', cursive;
+            padding-top: 7%;
             color: orangered;
-            margin-bottom: 5%;
+            text-align: center;
+            margin-bottom: 6%;
         }
 
         .alt2 h1 {
             font-family: 'Satisfy', cursive;
             color: purple;
+            padding-top: 7%;
+            text-align: center;
             margin-bottom: 6%;
         }
 
@@ -225,7 +257,7 @@
 
         #imge1 {
             width: 90%;
-            height: 90%;
+            height: 95%;
             padding: 0;
         }
 
@@ -239,6 +271,10 @@
 
         .checked {
             color: palevioletred;
+        }
+
+        .contact {
+            width: 65%;
         }
 
         /* .cont1,
@@ -260,6 +296,7 @@
         .exp h3 {
             font-family: 'Raleway', sans-serif;
             margin-top: 0;
+            font-size: large;
         }
 
         .cont1 {
@@ -274,6 +311,8 @@
             list-style: none;
             padding: 20px 0 20px;
             position: relative;
+            width: 90%;
+            margin: 0 auto;
         }
 
         .timeline:before {
@@ -359,7 +398,7 @@
             left: 50%;
             margin-left: -25px;
             background-color: #999999;
-            z-index: 100;
+            z-index: 0;
             border-top-right-radius: 50%;
             border-top-left-radius: 50%;
             border-bottom-right-radius: 50%;
@@ -416,6 +455,20 @@
 
         .timeline-body>p+p {
             margin-top: 5px;
+        }
+
+        .container {
+            width: 80%;
+        }
+
+        #social {
+            font-size: 30px;
+            color: white;
+            margin-right: 4%;
+        }
+
+        #social:hover {
+            color: grey;
         }
 
         @media screen and (max-width: 450px) {
@@ -476,7 +529,24 @@
                 padding: 3%;
                 text-align: left;
                 float: left;
+            }
 
+            .container {
+                width: 100%;
+            }
+
+            .timeline-title {
+                font-size: small;
+                font-weight: bold;
+            }
+
+            .contact {
+                width: 90%;
+            }
+
+            #social {
+                font-size: 23px;
+                margin: 2% 6% 2% 0;
             }
 
         }
@@ -489,330 +559,263 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
             }
+
+            .container {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="20">
-
-
-
-
-    <div class="bg jumbotron text-center" id="1">
-        <img id="imge" src="../static/esha.jpg">
-        <h1 id="name1">Esha Srivastav</h1>
-        <p id="font1">Student | Computer Science and Engineering</p>
-
-    </div>
-
-    <div class="container-fluid alt1 text-center" id="2">
-        <div class="row" style="margin: 3% 0;">
-            <div class="col-sm-4">
-                <h1>About me</h1>
-                <p style="width:90%">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged.</p>
-            </div>
-            <div class="col-sm-4">
-                <img id="imge1" src="https://images-na.ssl-images-amazon.com/images/I/61ivygzgQ2L._AC_SL1000_.jpg">
-            </div>
-            <div class="col-sm-4">
-                <h1>Details</h1>
-                <p><b>Age:</b></p>
-                <p>19 years</p>
-                <p><b>Location:</b></p>
-                <p>Vadodara, India</p>
-                <p><b>Language:</b></p>
-                <p>English, Hindi, Gujarati</p>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid text-center alt2" id="3">
-        <div class="row">
-            <div class="col-sm-6"
-                style="background-color:whitesmoke;padding: 10% 0;margin-right: 1.5%;border: 2px solid black;border: 2px solid black;padding: 20px;">
-                <h1>Skills</h1>
-                <table
-                    style="width: 90%; font-size: 20px;font-family: 'Raleway', sans-serif;border-spacing: 0 45px;text-align: left;margin: 0 auto;">
-                    <span style="margin-top: 30px;">
-                        <tr>
-                            <td>Python</td>
-                            <td>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </td>
-                        </tr>
-                    </span>
-                    <tr>
-                        <td>C++ programming</td>
-                        <td>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>HTML</td>
-                        <td>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>CSS</td>
-                        <td>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>JavaScript</td>
-                        <td>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-sm-6" style="background-color:whitesmoke;padding: 10% 0;border: 2px solid black;">
-                <h1>Strengths</h1>
-                <hr width="75%">
-                <ul style="text-align: left;">
-                    <li> Interacting with people </li>
-                    <li> Working in a team </li>
-                    <li> Leadership skills </li>
-                    <li> Work under pressure </li>
+<!-- Nav Bar -->
+<section id="nav_menu">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+                <p>Home</p>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ml-auto mr-auto nav-fill w-100">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#RecentProjects">Reject Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Timeline">Timeline</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact Me</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <div class="container-fluid alt1" id="4">
-        <h1>Recent Projects</h1>
-        <div class="exp row">
-            <div class="col-sm-3">
-                <h3><b>Lorem Ipsum</b></h3>
-            </div>
-            <div class="col-sm-7">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    printer
-                    took a galley of type and scrambled it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            </div>
-        </div>
-        <div class="exp row">
-            <div class="col-sm-3">
-                <h3><b>Lorem Ipsum</b></h3>
-            </div>
-            <div class="col-sm-7">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    printer
-                    took a galley of type and scrambled it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            </div>
-        </div>
-        <div class="exp row">
-            <div class="col-sm-3">
-                <h3><b>Lorem Ipsum</b></h3>
-            </div>
-            <div class="col-sm-7">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    printer
-                    took a galley of type and scrambled it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            </div>
-        </div>
-    </div>
+    </nav>
+</section>
 
-    <div class="container alt2" id="5">
-        <h1 style="margin: 5% 5%;">Timeline</h1>
-        <div class="container">
-            <ul class="timeline">
-                <li>
-                    <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via
-                                    Twitter</small></p>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois
-                                divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis,
-                                nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-                                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis
-                                i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
-                                gostis.</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois
-                                divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis,
-                                nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-                                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis
-                                i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
-                                gostis.</p>
-                            <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi
-                                no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis
-                                tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere
-                                pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum
-                                justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum
-                                cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois
-                                divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis,
-                                nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-                                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis
-                                i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
-                                gostis.</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois
-                                divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis,
-                                nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-                                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis
-                                i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
-                                gostis.</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois
-                                divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis,
-                                nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-                                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis
-                                i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
-                                gostis.</p>
-                            <hr>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois
-                                divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis,
-                                nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-                                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis
-                                i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
-                                gostis.</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois
-                                divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis,
-                                nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-                                Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis
-                                i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
-                                gostis.</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+<div class="bg jumbotron text-center" id="1">
+    <img id="imge" src="../static/esha.png" style="margin-top: 7%">
+    <h1 id="name1">Esha Srivastav</h1>
+    <p id="font1">Student | Computer Science and Engineering</p>
 
+</div>
+
+<div class="container-fluid alt1 text-center" id="About"
+    style="background: url('https://res.cloudinary.com/practicaldev/image/fetch/s--BuPz-p40--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nphrgz8yfnjylrwfr0yl.png');">
+    <h1 style="margin-bottom: 3%;">About me</h1>
+    <div id="container about">
+        <p style="color: white;margin-bottom: 7%;">I am a confident and hardworking
+            person. My motive is to achieve maximum results by
+            utilizing the best of my capabilities. An astute learner with a flair for adopting emerging trends
+            and addressing industry requirements to ensure achievement of organizational objectives within the
+            deadlines.</p>
     </div>
+</div>
+<div class="container-fluid" id="skills"
+    style="background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/y-so-serious-white.png');">
+    <div class="container text-center alt2" id="3" style="background-color:whitesmoke;">
+        <h1 style="margin-bottom: 3%;">Skills</h1>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/c-programming.png" />
+            <p>C</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/c-plus-plus-logo.png" />
+            <p>C++</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/html-5.png" />
+            <p>HTML5</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/css3.png" />
+            <p>CSS3</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/bootstrap.png" />
+            <p>Bootstrap</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/javascript.png" />
+            <p>Javascript</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/git.png" />
+            <p>Git</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/officel/80/000000/php-logo.png" />
+            <p>PHP</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/mysql-logo.png" />
+            <p>MySQL</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/nodejs.png" />
+            <p>NodeJs</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/mongodb.png" />
+            <p>MongoDB</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/python.png" />
+            <p>Python</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/flask.png" />
+            <p>Flask</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/postgreesql.png" />
+            <p>PostgreSQL</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/flutter.png" />
+            <p>Flutter</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/dart.png" />
+            <p>Dart</p>
+        </div>
+        <div id="icon"><img src="https://img.icons8.com/color/80/000000/heroku.png" />
+            <p>Heroku</p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container-fluid alt1" id="RecentProjects">
+    <h1>Recent Projects</h1>
+    <div class="exp row">
+        <div class="col-sm-4">
+            <a href="https://github.com/Corona-Vaccine-Management-System/Corona-Management" target="_blank"
+                style="color: #333;">
+                <h3><b>Vaccine Management System</b></h3>
+            </a>
+        </div>
+        <div class="col-sm-8">
+            <p> Creating a Vaccine Management System, allowing users to register
+                themselves as patients and choose a hospital closest to their address
+                registered, allows hospitals to register themselves and maintain and
+                view patient records. <br>
+                Implementing Rest API from NodeJs and Express to handle user re-
+                quests in MySql database.</p>
+        </div>
+    </div>
+    <div class="exp row">
+        <div class="col-sm-4">
+            <a href="https://github.com/RohitYelnare/amoc" target="_blank" style="color: #333;">
+                <h3><b>Shares and Cryptocurrency Portfolio Flutter App</b></h3>
+            </a>
+        </div>
+        <div class="col-sm-8">
+            <p> Flutter app to assist user manage their investment portfolio. The app
+                will show the real-time gains/losses the user’s shares and cryptocur-
+                rency makes, show latest news and real-time quotes as well as keep
+                watch on multiple stocks at the same time. <br>
+                API used to fetch the real time data.</p>
+        </div>
+    </div>
+    <div class="exp row">
+        <div class="col-sm-4">
+            <h3><b>Wedding Planners Website</b></h3>
+        </div>
+        <div class="col-sm-8">
+            <p>Designed and developed front end UI for Wedding planners which in-
+                cluded forms in backend.</p>
+        </div>
+    </div>
+</div>
 
-    <div class="container-fluid alt1" id="6">
-        <h1 style="margin-bottom: 1%;text-align: center;">Contact Me!</h1>
-        <div class="container" style="width: 85%;margin: 0 auto;">
-            {% if message %}
-            <p class="message">{{ message | safe }}</p>
-            {% endif %}
-            <form action="/submit" method="POST">
+<div class="container alt2" id="Timeline">
+    <h1 style="margin-bottom: 5%;">Timeline</h1>
+    <div class="container">
+        <ul class="timeline">
+            <li>
+                <div class="timeline-badge"><i class="	glyphicon glyphicon-education"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Sardar Vallabhbhai National Institute of Technology, Surat</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p><small class="text-muted"><i class="	glyphicon glyphicon-time"
+                                    style="margin-right: 5px;"></i>2019 - 2023</small></p>
+                        <p>8.52.8 CGPA, 8.91 SGPA</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-badge warning"><i class="	glyphicon glyphicon-education"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Indian High School, Dubai</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"
+                                    style="margin-right: 5px;"></i>2019</small></p>
+                        <p>12th Grade - 93% CGPA (AISSCE)</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-badge danger"><i class="	glyphicon glyphicon-education"></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">Navrachna High School, Vadodara</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"
+                                    style="margin-right: 5px;"></i>2017</small></p>
+                        <p>10th Grade - 9.8 CGPA (AISSE)</p>
+                    </div>
+                </div>
+            </li>
+    </div>
+    </li>
+    </ul>
+</div>
+
+</div>
+
+;<div class="container-fluid alt1" id="Contact" style="margin-top: 5%;">
+    <h1 style="margin-bottom: 4%;text-align: center;">Contact Me!</h1>
+    <div class="contact" style="margin: 0 auto;">
+        {% if message %}
+        <p class="message">{{ message | safe }}</p>
+        {% endif %}
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <h3>Name<span style="color: red;">*</span></h3>
+                {% if name %}
+                <input type="text" name="name" value={{ name }} />
+                {% else %}
+                <input type="text" name="name" placeholder="Your name" />
+                {% endif %}
                 <div class="form-group">
-                    <h3>Name<span style="color: red;">*</span></h3>
-                    {% if name %}
-                    <input type="text" name="name" value={{ name }} />
+                    <h3>Phone number<span style="color: red;">*</span></h3>
+                    {% if phone %}
+                    <input type="tel" name="phone" value={{ phone }} />
                     {% else %}
-                    <input type="text" name="name" placeholder="Your name" />
+                    <input type="tel" name="phone" placeholder="Your phone number" />
                     {% endif %}
-                    <div class="form-group">
-                        <h3>Phone number<span style="color: red;">*</span></h3>
-                        {% if phone %}
-                        <input type="tel" name="phone" value={{ phone }} />
-                        {% else %}
-                        <input type="tel" name="phone" placeholder="Your phone number" />
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        <h3>Email<span style="color: red;">*</span></h3>
-                        {% if email %}
-                        <input type="email" name="email" value={{ email }} />
-                        {% else %}
-                        <input type="email" name="email" placeholder="Your Email-Id" />
-                        {% endif %}
-                    </div>
-                    <div class="form-group">
-                        <h3>Comments about your experience</h3>
-                        <textarea name="comments" id="" cols="30" rows="10"
-                            placeholder="Tell us what you liked and/or did not like"></textarea>
-                    </div>
-                    <input type="submit" value="Submit" class="btn" />
-            </form>
-        </div>
-
-
+                </div>
+                <div class="form-group">
+                    <h3>Email<span style="color: red;">*</span></h3>
+                    {% if email %}
+                    <input type="email" name="email" value={{ email }} />
+                    {% else %}
+                    <input type="email" name="email" placeholder="Your Email-Id" />
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <h3>Message</h3>
+                    <textarea name="comments" id="" cols="30" rows="5"
+                        placeholder="Any message you would like to share."></textarea>
+                </div>
+                <input type="submit" value="Submit" class="btn" />
+        </form>
     </div>
-
+</div>
+</div>
+<div class="container-fluid" id="6"
+    style="background-color: #000;display: flex;align-items: center;justify-content: center;">
+    <a href="https://www.linkedin.com/in/esha-srivastav-8b13091a8/" target="_blank" style="margin-right: 6%;"><i
+            class="fa fa-linkedin" id="social"></i></a>
+    <a href="https://github.com/esha123802" target="_blank" style="margin-right: 6%;"><i class="fa fa-github"
+            id="social"></i></a>
+    <a href="mailto: esha1238@gmail.com"><i class="fa fa-envelope" id="social"></i></a>
+</div>
+</div>
 </body>
 
 </html>
