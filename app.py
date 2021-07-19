@@ -36,6 +36,10 @@ class ContactMe(db.Model):
 def index():
     return render_template('index.html')
 
+@app.route('/index')
+def index1():
+    return render_template('index.html')
+
 @app.route('/submit', methods=['POST'])
 def submit():
     if request.method == 'POST':
