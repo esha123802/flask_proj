@@ -21,7 +21,7 @@ from email.mime.text import MIMEText
 #         server.login(login, password)
 #         server.sendmail(sender_email, receiver_email, msg.as_string())
 
-EMAIL_PWD = os.environ.get('GMAIL_PWD')
+EMAIL_PWD = '1238@Lala'
 def send_mail(name, phone, email, comments):
     with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
         smtp.ehlo()
