@@ -238,7 +238,7 @@
                     <h3>Phone number<span style="color: red;">*</span></h3>
                     {% if phone %}
                     <input type="tel" name="phone" value={{ phone }} /> {% else %}
-                    <input type="tel" name="phone" placeholder="Your phone number" /> {% endif %}
+                    <input type="tel" name="phone" placeholder="Your phone number" pattern="[1-9]{1}[0-9]{9}" /> {% endif %}
                 </div>
                 <div class="form-group">
                     <h3>Email<span style="color: red;">*</span></h3>
