@@ -97,13 +97,13 @@ html {
     width: 100%;
     height: 100%;
     background: transparent;
-    border-right: 2px solid white;
-    border-top: 2px solid white;
+    border-right: 1.5px solid orange;
+    border-top: 1.5px solid orange;
 }
 
 #name1:before {
-    animation: animate infinite ease-out;
-    animation-duration: 4s;
+    animation: animate ease-in-out;
+    animation-duration: 2s;
     animation-direction: alternate;
 }
 
@@ -144,14 +144,14 @@ html {
     width: 100%;
     height: 100%;
     background: transparent;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
+    border-left: 1.5px solid orange;
+    border-bottom: 1.5px solid orange;
 }
 
 #name1:after {
     /* animation: animates 1s linear forwards; */
-    animation: animates infinite ease-out;
-    animation-duration: 4s;
+    animation: animates ease-in-out;
+    animation-duration: 2s;
     animation-direction: alternate;
 }
 
@@ -490,21 +490,21 @@ input:focus, textarea:focus, select:focus {
     }
 
     #font1 {
-        position: relative;
-        font-size: 17px;
-        top: 10%;
-        width: 85%;
-        font-size: medium;
+        display: none;
     }
 
     #name1 {
-        position: relative;
+        position: absolute;
         font-size: 63px;
-        top: 8%;        
+        top: 9%;        
         font-family: 'Poppins', sans-serif;
         background: white;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    #name1::before, #name1::after{
+        border: transparent;
     }
 
     .cnt {
